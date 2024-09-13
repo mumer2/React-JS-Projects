@@ -1,0 +1,196 @@
+/* Basic styling for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: black;
+  position: relative;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #8c979e;
+  font-weight: 400;
+  padding-left: 15px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.navbar-links a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.navbar-links a:hover {
+  color: blue;
+}
+
+/* Toggle button for mobile menu */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+  background-color: blue;
+}
+
+.navbar-toggle .bar {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+i{
+  color: blue;
+}
+
+
+/* Dropdown styles */
+.navbar-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.dropdown-toggle:hover {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  color: blue;
+}
+
+/* Show dropdown when active */
+.dropdown-menu.show {
+  display: block;
+}
+
+
+/* Header */
+
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Parallax Container */
+.parallax {
+  /* The image used for the parallax background */
+  background-image: url('p1.jpg');
+
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Parallax Content */
+.parallax-content {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.parallax-content h1 {
+  font-size: 5vw;  /* Responsive heading size */
+  margin-bottom: 8px;
+}
+
+.parallax-content p {
+  font-size: 1.2vw;  /* Responsive paragraph size */
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+  .parallax-content h1 {
+      font-size: 6vw;
+  }
+
+  .parallax-content p {
+      font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-content h1 {
+      font-size: 8vw;
+  }
+
+  .parallax-content p {
+      font-size: 4vw;
+  }
+}

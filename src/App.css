@@ -1,0 +1,1691 @@
+/* Ensure the dropdown opens on hover */
+
+body{
+    margin-top: 70px;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* max-width: 1251px; */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Optional: removes the small margin on hover */
+  }
+  
+  /* Ensure proper alignment between brand and navbar toggler */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-brand{
+    font-size: 24px;
+    color: rgb(152, 142, 142);
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 350;
+  }
+  .nav-link{
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .nav-item a:hover{
+    color: blue;
+  }
+
+  .dropdown-item{
+    font-size: 13px;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  }
+
+  /* Custom Toggler Button */
+.custom-toggler {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    display: block; /* Ensure it is always shown, regardless of screen size */
+  }
+  
+  /* Toggler icon (3 lines) */
+  .toggler-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+  
+  .toggler-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: blue;  /* Blue color for the lines */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Optional: Add hover effect */
+  .custom-toggler:hover .toggler-icon span {
+    background-color: darkblue;  /* Darker blue on hover */
+  }
+  
+  /* Ensure the navbar collapse behaves properly on all screens */
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  
+  /* Optional: You can hide the custom toggler on large screens if needed */
+  @media (min-width: 992px) {
+    .custom-toggler {
+      display: none; /* Hides toggler on large screens */
+    }
+  }
+  
+
+
+
+  i{
+    color: blue;
+  }
+  
+  /* Ensure that on smaller screens, the navigation links are hidden behind the toggler */
+  .navbar .collapse {
+    justify-content: flex-end; /* Align navigation links to the right */
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap; /* Ensure elements wrap nicely on smaller screens */
+    }
+    
+    .navbar .collapse {
+      width: 100%;
+      margin-top: 10px; /* Add a small margin when collapsed */
+    }
+  }
+  
+
+
+
+  /* Hide the nested dropdown by default */
+.dropdown-submenu .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 100%; /* Aligns it to the right of the parent menu */
+  top: 0;
+  margin-top: -5px; /* Optional to adjust alignment */
+}
+
+/* Show the nested dropdown on hover */
+.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+}
+
+/* Positioning and appearance of the submenu */
+.dropdown-submenu {
+  position: relative;
+}
+  /* Header */
+
+
+  /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parallax h1{
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 370;
+    
+}
+
+.parallax p{
+    margin-top: 20px;
+}
+
+/* Parallax Container */
+.parallax {
+    /* The image used for the parallax background */
+    background-image: url('p1.jpg');
+
+    /* Set a specific height */
+    height: fit-content;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Parallax Content */
+.parallax-content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.parallax-content h1 {
+    font-size: 4rem;  /* Responsive heading size */
+    
+}
+
+.parallax-content p {
+    font-size: 0.9rem;  /* Responsive paragraph size */
+    max-width: 800px;
+    /* line-height: 1.5; */
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+    .parallax-content h1 {
+        font-size: 6vw;
+        margin-top: 0;
+    }
+
+    .parallax-content p {
+        font-size: 3vw;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax-content h1 {
+        font-size: 8vw;
+        margin-top: 0;
+    }
+
+    .parallax-content p {
+        font-size: 4vw;
+        margin: 0;
+    }
+}
+@media (max-width: 300px) {
+    .parallax-content {
+        margin-top: 0%;
+    }
+
+}
+
+.btn1{
+    margin-top: 10px;
+    background: #745cf9;
+    color: #fff;
+    border-color: #745cf9;
+    line-height: 24px;
+    min-width: 200px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    font-family: inherit;
+    border: 2px solid #745cf9;
+    padding: 0 26px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    margin-right: 8px;
+    margin-bottom: 24px;
+    white-space: normal;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    box-sizing: inherit;
+    height: 50px;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.btn1:hover{
+    background-color:  #695cb1;
+    border-color: #695cb1;
+}
+
+.btn2{
+    margin-top: 10px;
+    color: #fff;
+    border-color: #fff;
+    margin-right: 0;
+    line-height: 24px;
+    min-width: 200px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    font-family: inherit;
+    border: 2px solid #ffffff;
+    padding: 0 26px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    margin-bottom: 24px;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    text-decoration: none;
+    background-color: transparent;
+    box-sizing: inherit;
+    height: 50px;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn2:hover{
+    background-color:  #ffffff;
+    border-color: #ffffff;
+    color: black;
+}
+
+
+/* Section1 */
+
+#img1 img{
+    width: 100%;
+}
+
+#cont1 h3{
+    margin-top: 20px;
+    line-height: 60px;
+    font-weight: 400;
+}
+
+#cont1 p{
+    color: rgb(182, 178, 178);
+    font-size: 14px;
+    line-height: 25px;
+}
+
+/* section2 */
+
+
+#cont2 h3{
+    margin-top: 20px;
+    line-height: 60px;
+    font-weight: 400;
+}
+#cont2 p{
+    color: rgb(182, 178, 178);
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+
+
+/* Paralax2 */
+
+.parallax h1{
+    font-weight: 350;
+    /* line-height: 66px; */
+}
+
+.parallax p{
+    margin-top: 20px;
+}
+
+/* Parallax Container */
+.parallax2 {
+    /* The image used for the parallax background */
+    background-image: url('p2.jpg');
+
+    /* Set a specific height */
+    height: fit-content;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Parallax Content */
+.parallax2-content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.parallax2-content h1 {
+    font-size: 4rem;  /* Responsive heading size */
+    margin-bottom: 8px;
+}
+
+.parallax2-content p {
+    font-size: 0.9rem;  /* Responsive paragraph size */
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+    .parallax2-content h1 {
+        font-size: 6vw;
+    }
+
+    .parallax2-content p {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax2-content h1 {
+        font-size: 8vw;
+    }
+
+    .parallax2-content p {
+        font-size: 4vw;
+    }
+}
+@media (max-width: 300px) {
+    .parallax2-content {
+        margin-top: 0%;
+    }
+
+}
+
+.btn1{
+    margin-top: 10px;
+    background: #745cf9;
+    color: #fff;
+    border-color: #745cf9;
+    line-height: 24px;
+    min-width: 200px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    font-family: inherit;
+    border: 2px solid #745cf9;
+    padding: 0 26px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    margin-right: 8px;
+    margin-bottom: 24px;
+    white-space: normal;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    box-sizing: inherit;
+    height: 50px;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.btn1:hover{
+    background-color:  #695cb1;
+    border-color: #695cb1;;
+}
+
+
+/* Section3 */
+
+#sect3{
+    margin-top: 30px;
+}
+#sect3 h2{
+    font-weight: 350;
+}
+
+#sect3 p{
+    color: rgb(147, 147, 147);
+
+}
+
+
+/* Gallery */
+
+.galery{
+    margin-top: -32px;
+    color: white;
+}
+.galery h2{
+    font-size: 2rem;
+    font-weight: 360;
+    margin-top: 60px;
+}
+.galery p{
+    font-size: 0.9rem;
+    line-height: 50px;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+    padding: 0;
+}
+
+.gallery-item {
+    position: relative;
+    width: 25%; /* Four images per row by default */
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  transition: background 0.3s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(100%); /* Initially off-screen (bottom) */
+}
+
+.gallery-item:hover .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transform: translateY(0); /* Moves to the middle */
+}
+
+/* Responsive for tablets and smaller devices */
+@media (max-width: 1024px) {
+    .gallery-item {
+        width: 31%; /* Three images per row */
+    }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 48%; /* Two images per row */
+    }
+}
+
+/* Responsive for small mobile devices */
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%; /* One image per row */
+    }
+}
+
+/* Section4 */
+
+
+/* Parallax Container */
+.parallax3 {
+    /* The image used for the parallax background */
+    background-image: url('p3.jpg');
+
+    /* Set a specific height */
+    height: fit-content;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Parallax Content */
+.parallax3-content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.parallax3-content h2 {
+    font-size: 2rem;  /* Responsive heading size */
+    font-weight: 300;
+}
+
+.parallax3-content p {
+    font-size: 0.9rem;  /* Responsive paragraph size */
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+    .parallax3-content h1 {
+        font-size: 6vw;
+    }
+
+    .parallax3-content p {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax3-content h1 {
+        font-size: 8vw;
+    }
+
+    .parallax3-content p {
+        font-size: 4vw;
+    }
+}
+@media (max-width: 300px) {
+    .parallax3-content {
+        margin-top: 0%;
+    }
+
+}
+
+
+
+/* Slider */
+
+/* Parallax background */
+.parallax-bg {
+  background-image: url('p3.jpg'); /* Example image */
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.parallax-bg h2 {
+  text-align: center;
+  color: white;
+  padding-top: 4%;
+  font-weight: 300;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box; /* Make sure padding doesn't cause overflow */
+}
+
+/* Wrapper for carousel content and arrows */
+.carousel-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Main content area */
+.carousel-content {
+  flex: 1;
+  padding: 30px;
+  text-align: center;
+}
+
+.text-line {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.image-circle {
+  position: relative;
+  margin: 20px auto;
+}
+
+.image-circle img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+/* Navigation arrows */
+.nav-arrow {
+  background-color: transparent;
+  color: rgb(92, 75, 75);
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.nav-arrow:hover {
+  background-color: #d3c9c9;
+}
+
+.left-arrow {
+  margin-right: 20px;
+}
+
+.right-arrow {
+  margin-left: 20px;
+}
+
+/* Responsive adjustments */
+
+/* Tablets and medium devices */
+@media (max-width: 992px) {
+  .carousel-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-arrow, .right-arrow {
+    margin: 10px 0; /* Vertically stack arrows */
+  }
+
+  .carousel-content {
+    padding: 20px;
+  }
+
+  .text-line {
+    font-size: 0.8rem;
+  }
+
+  .image-circle img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .author-name {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile phones and smaller devices */
+@media (max-width: 576px) {
+  .carousel-content-wrapper {
+    flex-direction: column;
+  }
+
+  .carousel-content {
+    padding: 10px;
+  }
+
+  .text-line {
+    font-size: 0.7rem;
+  }
+
+  .image-circle img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .author-name {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust the arrows for smaller screens */
+  .nav-arrow {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+}
+
+  
+  /* Slider */
+
+  /* Container for the logo slider */
+.logo-slider {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 20px;
+  }
+  
+  .slider-title {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  /* Slider wrapper to contain the track */
+  .slider-wrapper {
+    overflow: hidden;
+    width: 80%; /* Adjust this based on your needs */
+    margin: 0 auto;
+  }
+  
+  /* Track for sliding logos */
+  .slider-track {
+    display: flex;
+    margin-top: 50px;
+    animation: slide 15s linear infinite;
+    width: calc(250px * 6); /* 6 logos * logo width */
+  }
+  
+  /* Individual slide */
+  .slide {
+    width: 250px; /* Adjust the size as per the logo size */
+    padding: 0 10px;
+  }
+  
+  .slide img {
+    max-width: 40%;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Change opacity on hover */
+  .slide img:hover {
+    opacity: 1;
+  }
+  
+  /* Animation for sliding */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Adjust this for continuous slide */
+    }
+  }
+  
+  /* Footer */
+
+  .like{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 12%;
+    text-align: center;
+    justify-content: center;
+  }
+  .like h1{
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 16px;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  .btn5{
+    margin-top: 10px;
+    background: #745cf9;
+    color: #fff;
+    border-color: #745cf9;
+    line-height: 24px;
+    min-width: 200px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    font-family: inherit;
+    border: 2px solid #745cf9;
+    padding: 0 26px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    margin-right: 8px;
+    margin-left: 10%;
+    margin-bottom: 24px;
+    white-space: normal;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    box-sizing: inherit;
+    height: 50px;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.btn5:hover{
+    background-color:  #695cb1;
+    border-color: #695cb1;;
+}
+
+  @media (max-width: 576px){
+    .like{
+      margin-left: 20px;
+      text-align: center;
+      justify-content: center;
+    }
+    .like h1{
+      font-size: 26px;
+    }
+
+  }
+
+  .footer{
+    color: white;
+    padding: 80px;
+  }
+
+  .icon{
+    margin-top: 13%;
+    margin-bottom: 10%;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  .icon i{
+    margin-left: 22px;
+    font-size: 18px;
+    color: white;
+  }
+  .icon i:hover{
+    color: blue;
+  }
+  @media (max-width: 768px) {
+    .footer, .icon {
+        text-align: center;
+        padding: 15px 0;
+    }
+    .footer p{
+      margin-top: 6%;
+      margin-left: -15%;
+    }
+    .icon{
+      margin-top: -10%;
+      margin-left: 15%;
+    }
+    .icon a {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 992px) {
+  .footer, .icon {
+      text-align: center;
+      padding: 15px 0;
+      margin-left: 10%;
+  }
+  .icon a {
+      margin: 5px;
+  }
+}
+@media (max-width: 300px) {
+  .footer, .icon {
+      text-align: center;
+      padding: 15px 0;
+  }
+  .icon a {
+      margin: 5px;
+  }
+}
+
+/* ********************** */
+    /* Blog Page */
+/* ********************** */
+
+
+/* SectionTop */
+
+.blog {
+  margin-left: 5%;
+  margin-top: 12%;
+  margin-bottom: 15%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block; /* Ensure the image doesn't have extra spacing */
+}
+
+.image-link {
+  position: absolute;
+  bottom: 0; /* Distance from the bottom of the image */
+  left: 0;   /* Distance from the left side of the image */
+  background-color: white;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  width: 48%;
+  height: 60px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.image-link a {
+  text-decoration: none;
+  color: gray;
+}
+
+.image-link a:hover {
+  color: blue;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-link {
+    font-size: 12px;
+    padding: 6px 10px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-link {
+    font-size: 10px;
+    padding: 5px 8px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.sticky p ,ul{
+  color: gray;
+}
+.sticky h1{
+margin-top: 6%;
+}
+.red{
+  color: red;
+  opacity: 0.7;
+}
+.blue{
+  color: blue;
+  opacity: 0.7;
+}
+
+.stickybtn{
+  background-color:  #695cb1;
+  border-color: #695cb1;;
+  color: white;
+  padding: 10px;
+  width: 40%;
+  text-decoration: none;
+  margin-bottom: 10%;
+  border: none;
+}
+.sticky i{
+  color: white;
+}
+
+/* #img1 {
+  position: relative;
+}
+
+#img1 img {
+  width: 100%;
+  height: auto;
+}
+
+.link {
+  position: absolute;
+  bottom: 49.6%; 
+  left: 12px; 
+  background-color: white;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  z-index: 10;
+}
+
+.link a {
+  text-decoration: none;
+  color: gray;
+}
+
+.link a:hover {
+  color: blue;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .link {
+    font-size: 12px;
+    padding: 6px 10px;
+    bottom: 0px; /* Adjust for smaller devices */
+    left: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .link {
+    font-size: 10px;
+    padding: 5px 8px;
+    bottom: 40px; /* Adjust for even smaller devices */
+    left: 6px;
+  }
+}
+
+#links p {
+  color: gray;
+  font-size: 13px;
+  margin: 20px;
+}
+
+#links h4 {
+  margin-top: 30px;
+}
+
+#linkimage img {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+#links a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.linkblog a {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  text-decoration: none;
+  color: rgb(166, 164, 164);
+  font-weight: 100;
+}
+
+.linkblog a:hover {
+  color: blue;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .blog {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 768px) {
+  .link {
+    font-size: 12px;
+    padding: 8px 12px;
+    width: 50%;
+  }
+  #links p {
+    margin: 10px;
+  }
+  #links h4 {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .link {
+    font-size: 10px;
+    padding: 6px 10px;
+    width: 60%;
+  }
+  .linkblog a {
+    margin-top: 10px;
+  }
+  #linkimage img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Pagination */
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #999;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination a.active {
+  background-color: #000dff;
+  color: white;
+}
+
+.pagination .prev,
+.pagination .next {
+  font-weight: bold;
+}
+
+.pagination .prev:hover,
+.pagination .next:hover {
+  /* background-color: #0056b3; */
+  color: white;
+}
+
+/* Responsive Pagination */
+@media (max-width: 768px) {
+  .pagination a {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pagination a {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+}
+
+/* **************************** */
+         /* Portfolio */
+/* **************************** */
+
+.portfolio h2{
+  margin-top: 12%;
+}
+
+/* Gallery */
+
+.gallery2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  justify-content: center;
+  padding: 0;
+  margin-top: 15%;
+}
+
+.gallery2-item {
+  position: relative;
+  width: 25%; /* Four images per row by default */
+  overflow: hidden;
+}
+
+.gallery2-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gallery2-item .overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0);
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5em;
+transition: background 0.3s ease, transform 0.5s ease;
+opacity: 0;
+transform: translateY(100%); /* Initially off-screen (bottom) */
+}
+
+.gallery2-item:hover .overlay {
+background: rgba(0, 0, 0, 0.5);
+opacity: 1;
+transform: translateY(0); /* Moves to the middle */
+}
+
+/* Responsive for tablets and smaller devices */
+@media (max-width: 1024px) {
+  .gallery2-item {
+      width: 31%; /* Three images per row */
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 768px) {
+  .gallery2-item {
+      width: 48%; /* Two images per row */
+  }
+}
+
+/* Responsive for small mobile devices */
+@media (max-width: 480px) {
+  .gallery2-item {
+      width: 100%; /* One image per row */
+  }
+}
+
+/* About The Tests */
+
+#test h1{
+  font-size: 4.5vw;
+  font-weight: 400;
+}
+#test h2{
+  font-size: 3vw;
+  font-weight: 400;
+}
+#test p, ol{
+  color: gray;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+}
+
+/* Page1 */
+
+/* Ensure images are fully responsive */
+.capt img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center image */
+}
+
+/* Page1 */
+/* .si1 {
+  margin-top: 2%;
+  margin-left: 12%;
+  width: 100%;
+} */
+
+/* Make .si1 image responsive */
+.si1 {
+  max-width: 100%; /* Ensures the image will never overflow its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Responsive layout for different screen sizes */
+
+/* For mobile screens */
+@media (max-width: 576px) {
+  .si1 {
+    width: 100%; /* Ensures it takes up the full width of the container */
+    margin: 0 auto;
+  }
+}
+
+/* For tablets and small laptops */
+@media (max-width: 768px) {
+  .si1 {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 992px) {
+  .si1 {
+    width: auto; /* Ensure it's not stretched unnecessarily */
+    max-width: 100%; /* Maintain responsiveness */
+    height: auto;
+  }
+}
+
+
+.si3 img {
+  max-width: 100%;
+  height: auto; /* Ensure responsiveness */
+}
+
+/* General styling for the si5 container */
+.si5 {
+  text-align: center; /* Center the image and text */
+  margin-top: 20px; /* Adds margin for spacing */
+}
+
+/* Make the image responsive */
+.si5 img {
+  max-width: 100%; /* Ensure the image does not exceed the container width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+
+/* Style for the paragraph text */
+.si5 p {
+  margin-top: 10px; /* Add space between the image and the text */
+  font-size: 1rem; /* Ensure the text is readable across screen sizes */
+}
+
+/* Optional: Style for the blue text */
+.blue {
+  color: #007bff; /* Blue color for the caption */
+}
+
+/* Media queries for smaller screens */
+
+/* Mobile screen (up to 576px) */
+@media (max-width: 576px) {
+  .si5 img {
+    width: 100%; /* Image takes full width on mobile */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
+  .si5 p {
+    padding: 0 15px; /* Adds padding to keep the text from touching the edges */
+    font-size: 0.9rem; /* Slightly smaller font for mobile screens */
+  }
+}
+
+/* Tablet and small laptops (up to 768px) */
+@media (max-width: 768px) {
+  .si5 img {
+    width: 100%; /* Image still takes full width on tablets */
+    height: auto;
+  }
+
+  .si5 p {
+    padding: 0 20px; /* Adds some padding to the text for better readability */
+  }
+}
+
+
+.si5 p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.capt h6 {
+  margin: 12px;
+  text-align: center;
+}
+
+/* Responsive design for different screen sizes */
+
+/* For mobile screens */
+@media (max-width: 576px) {
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .capt img {
+    width: 100%; /* Full width image on small screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .form {
+    padding: 0 15px;
+  }
+
+  .btn1 {
+    width: 100%; /* Full width button on small screens */
+  }
+}
+
+/* For tablets and small laptops */
+@media (max-width: 768px) {
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .capt img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn1 {
+    width: 100%;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 992px) {
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .capt img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
+/* .si1{
+  margin-top: 2%;
+  margin-left: 12%;
+  width: 100%;
+}
+.si3 img{
+  width: 100%;
+}
+.si5 p{
+  text-align: center;
+  margin-top: 20px;
+}
+.capt h6{
+  margin: 12px;
+  text-align: center;
+
+} */
+
+
+/* form */
+
+.form{
+  margin-top: 16%;
+}
+.form p{
+  margin-top: 20px;
+}
+.custom-form .form-control {
+  border: none;
+  transition: border-color 0.3s;
+  box-shadow: none;
+  font-size: 16px;
+}
+.cmnt {
+  border: 1px solid rgb(132, 127, 127);
+  transition: border-color 0.3s;
+  box-shadow: none;
+}
+
+.custom-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+.custom-form .form-control:hover {
+  border-color: #007bff;
+  border: 1px solid rgb(185, 95, 185);
+}
+.form-group textarea{
+  border: 1px solid rgb(135, 60, 60);
+}
+.custom-form .form-group {
+  margin-bottom: 20px;
+}
+
+.custom-form textarea {
+  resize: none;
+}
+
+.custom-form .btn {
+  margin-top: 10px;
+}
+td a{
+  text-decoration: none;
+}
+dl{
+  color: gray;
+}
+
+dd{
+  margin-left: 20px;
+}
+
+/* Page3 */
+
+.page3{
+  width: 20%;
+}
+
+
+/* Page4 */
+
+.comment-section {
+  margin-top: 10%;
+  width: 100%;
+  max-width: 800px;
+  /* margin: 0 auto; */
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 2px;
+  margin-right: 15px;
+}
+
+.comment-details {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-header h4 {
+  margin: 0;
+  font-size: 1.1em;
+  color: gray;
+}
+
+.comment span {
+  font-size: 0.7em;
+  color: #888;
+}
+
+p {
+  margin: 5px 0 0;
+}
+
+.cmntbtn{
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 2px;
+  border: 2px solid rgb(91, 91, 210);
+  width: 20%;
+  color: #000dff;
+  font-weight: 600;
+}
+.cmntbtn:hover{
+  background-color: #000dff;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Ensure dropdown and submenu are responsive */
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Show submenu to the right */
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu.show > .dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  /* For small screens */
+  .dropdown-menu {
+    position: static;
+    float: none;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
+    display: none;
+    position: static;
+  }
+
+  .dropdown-submenu.show > .dropdown-menu {
+    display: block;
+  }
+}
+ 
