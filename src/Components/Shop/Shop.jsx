@@ -3,16 +3,17 @@ import React from 'react';
 export const Shop = () => {
   return (
     <div id='Blog'>
+      <div className='shop'>
       <div className="blog">
         <h2>Shop</h2>
       </div>
-
+      </div>
 
 
 <div className="container" id='test'>
-    <h1>Shop</h1>
   <div className="row">
   <div className="col-md-8 col-sm-12">
+  <h1>Shop</h1>
    
 </div>
 

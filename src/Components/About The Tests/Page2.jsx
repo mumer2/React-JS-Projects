@@ -11,28 +11,33 @@ export const Page2 = () => {
 
 
 <div className="container" id='test'>
-    <h1>Page Markup And Formatting</h1>
   <div className="row">
   <div className="col-md-8 col-sm-12">
+  <h1>Page Markup And Formatting</h1>
+<div className='headings'>
     <p> <b> Headings</b></p>
     <h1>Header one</h1>
-    <h2>Header one</h2>
-    <h3>Header one</h3>
-    <h4>Header one</h4>
-    <h5>Header one</h5>
-    <h6>Header one</h6>
+    <h2>Header two</h2>
+    <h3>Header three</h3>
+    <h4>Header foue</h4>
+    <h5>Header five</h5>
+    <h6>Header six</h6>
 
     
     <h1>Blockquotes</h1>
     <p>Single line blockquote:</p>
-    "Stay hungry. Stay foolish".
+<br/><br/>
+    <q>"Stay hungry. Stay foolish".</q>
+<br/><br/>
     <p>Multi line blockquote with a cite reference:</p>
-
+<br/><br/>
     "People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. Steve Jobs – Apple Worldwide Developers’ Conference, 1997"
 
     
-
-    <h1>Tables</h1>
+    </div>
+    <br/>
+    <h2>Tables</h2>
+    <br/>
     <table style={{ borderCollapse: 'collapse', borderSpacing: '10px', width: '100%' }}>
       <thead>
         <tr style={{ borderBottom: '1px solid gray',borderTop: '1px solid gray', padding: '10px' }}>
@@ -67,8 +72,9 @@ export const Page2 = () => {
         </tr>
       </tbody>
     </table>
-
-    <h1>Definition Lists</h1>
+<br/>
+    <h2>Definition Lists</h2>
+    <br/>
     <dl>
         <dt>Definition List Title</dt>
         <dd>Definition list division.</dd>
@@ -249,14 +255,14 @@ United States</p>
       <div className="sidebar-container">
         <h4>Top Posts</h4>
 
-        <div className="row mb-3">
+        {/* <div className="row mb-3">
           <div className="col-4" id="linkimage">
             <img src="Images/l1.webp" alt="" />
           </div>
           <div className="col-8 p-2">
             <a href="/">Template: More Tag</a>
           </div>
-        </div>
+        </div> */}
 
         <div className="row mb-3">
           <div className="col-4" id="linkimage">
@@ -276,14 +282,14 @@ United States</p>
           </div>
         </div>
 
-        <div className="row mb-3">
+        {/* <div className="row mb-3">
           <div className="col-4" id="linkimage">
             <img src="Images/l4.webp" alt="" />
           </div>
           <div className="col-8 p-2">
             <a href="/">Markup: HTML Tags and Formatting</a>
           </div>
-        </div>
+        </div> */}
 
         <div className="row mb-3">
           <div className="col-4" id="linkimage">
@@ -294,14 +300,14 @@ United States</p>
           </div>
         </div>
 
-        <div className="row mb-3">
+        {/* <div className="row mb-3">
           <div className="col-4" id="linkimage">
             <img src="Images/l6.webp" alt="" />
           </div>
           <div className="col-8 p-2">
             <a href="/">Template: Featured Image </a>
           </div>
-        </div>
+        </div> */}
 
         <h4>Recent Posts</h4>
 

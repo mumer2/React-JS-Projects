@@ -6,6 +6,177 @@ body{
     /* max-width: 1251px; */
 }
 
+/* Ensure dropdown and submenu are responsive */
+.dropdown-menu {
+  position: relative;
+}
+.dropdown-menu1 {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu1 {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 100%; /* Show submenu to the right */
+}
+
+.dropdown-submenu:hover > .dropdown-menu1,
+.dropdown-submenu.show > .dropdown-menu1 {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  /* For small screens */
+  .dropdown-menu1 {
+    position: static;
+    float: none;
+  }
+
+  .dropdown-submenu > .dropdown-menu1 {
+    /* display: none; */
+    position: static;
+  }
+
+  .dropdown-submenu.show > .dropdown-menu1 {
+    display: block;
+  }
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 100%; /* Show submenu to the right */
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu.show > .dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  /* For small screens */
+  .dropdown-menu {
+    position: static;
+    float: none;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
+    /* display: none; */
+    position: static;
+  }
+
+  .dropdown-submenu.show > .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Remove background color and set text color to blue on hover */
+.navbar-nav .nav-link, 
+.navbar-nav .dropdown-item {
+  background-color: none !important;
+  color: #000;  /* Default color for text */
+}
+
+/* When clicked (active state), change text color to blue */
+.navbar-nav .nav-link:active, 
+.navbar-nav .dropdown-item:active,
+.navbar-nav .nav-link:hover,
+.navbar-nav .dropdown-item:hover {
+  background-color: transparent !important;  /* Remove any background */
+  color: blue !important;  /* Text color blue */
+}
+
+/* For the opened dropdown */
+/* .navbar-nav .dropdown-menu {
+  background-color: transparent;
+} */
+
+.navbar-nav .dropdown-menu .dropdown-item:active {
+  color: blue !important;
+}
+
+
+
+
+
+
+
+
+
+/* Search button styles */
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 18px;
+  padding: 0;
+}
+
+.search-button i {
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+/* Container to position the search box relative to the search icon */
+.search-container {
+  position: relative;
+}
+
+/* Search Popup Section */
+.search-popup {
+  position: absolute;
+  top: 100%; /* Appears right below the icon */
+  right: 0; /* Adjusted to appear with margin from the right */
+  margin-right: 15px; /* Add some margin from the right side */
+  width: 280px; /* Adjusted to 300px width */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  display: none; /* Hidden by default */
+  padding: 20px;
+  
+  align-items: center;
+  flex-direction: row; /* Align input and button side by side */
+}
+
+/* Show the search box when hovering over the search container */
+.search-container:hover .search-popup {
+  display: flex;
+}
+
+.search-input {
+  flex: 1; /* Take available space */
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+  outline: none;
+  margin-right: 5px; /* Small gap between input and button */
+}
+
+.search-submit {
+  background-color: #745cf9;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  
+  white-space: nowrap; /* Keep the button text in a single line */
+}
+
+/* Hover effect for the search button */
+.search-submit:hover {
+  background-color: #695cb1;
+}
+
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0; /* Optional: removes the small margin on hover */
@@ -32,13 +203,16 @@ body{
     font-weight: 500;
   }
   .nav-item a:hover{
-    color: blue;
+    color: #695cb1;
   }
 
   .dropdown-item{
     font-size: 13px;
     font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
+  }
+  .dropdown-item:hover{
+    color: #695cb1;
+    opacity: 1;
   }
 
   /* Custom Toggler Button */
@@ -62,14 +236,16 @@ body{
     display: block;
     width: 100%;
     height: 3px;
-    background-color: blue;  /* Blue color for the lines */
+    background-color: blue;  
+    /* Blue color for the lines */
     border-radius: 2px;
     transition: all 0.3s ease;
   }
   
   /* Optional: Add hover effect */
   .custom-toggler:hover .toggler-icon span {
-    background-color: darkblue;  /* Darker blue on hover */
+    background-color: darkblue;  
+    /* Darker blue on hover */
   }
   
   /* Ensure the navbar collapse behaves properly on all screens */
@@ -115,9 +291,12 @@ body{
 .dropdown-submenu .dropdown-menu {
   display: none;
   position: absolute;
-  left: 100%; /* Aligns it to the right of the parent menu */
+  left: 100%; 
+  /* Aligns it to the right of the parent menu */
   top: 0;
-  margin-top: -5px; /* Optional to adjust alignment */
+  margin-top: -5px; 
+  cursor: pointer;
+  /* Optional to adjust alignment */
 }
 
 /* Show the nested dropdown on hover */
@@ -128,6 +307,7 @@ body{
 /* Positioning and appearance of the submenu */
 .dropdown-submenu {
   position: relative;
+  cursor: pointer;
 }
   /* Header */
 
@@ -219,41 +399,78 @@ body{
 
 }
 
-.btn1{
-    margin-top: 10px;
-    background: #745cf9;
-    color: #fff;
-    border-color: #745cf9;
-    line-height: 24px;
-    min-width: 200px;
-    padding-bottom: 13px;
-    padding-top: 13px;
-    font-family: inherit;
-    border: 2px solid #745cf9;
-    padding: 0 26px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 0;
-    text-align: center;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    margin-right: 8px;
-    margin-bottom: 24px;
-    white-space: normal;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    box-sizing: inherit;
-    height: 50px;
-    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.btn1 {
+  margin-top: 10px;
+  background: #745cf9;
+  color: #fff;
+  border-color: #745cf9;
+  line-height: 24px;
+  min-width: 200px;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  font-family: inherit;
+  border: 2px solid #745cf9;
+  padding: 0 26px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-right: 8px;
+  margin-bottom: 24px;
+  white-space: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  box-sizing: inherit;
+  height: 50px;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.btn1:hover{
-    background-color:  #695cb1;
-    border-color: #695cb1;
+
+.btn1:hover {
+  background-color: #695cb1;
+  border-color: #695cb1;
 }
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .btn1 {
+    min-width: 180px;
+    padding: 10px 22px;
+    font-size: 11px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn1 {
+    min-width: 160px;
+    padding: 8px 20px;
+    font-size: 10px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn1 {
+    min-width: 140px;
+    padding: 6px 18px;
+    font-size: 9px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn1 {
+    min-width: 120px;
+    padding: 5px 16px;
+    font-size: 8px;
+    height: 35px;
+  }
+}
+
 
 .btn2{
     margin-top: 10px;
@@ -903,6 +1120,10 @@ body{
     padding: 80px;
   }
 
+  .fot{
+    margin-top: 8%;
+  }
+
   .icon{
     margin-top: 13%;
     margin-bottom: 10%;
@@ -967,6 +1188,25 @@ body{
   margin-left: 5%;
   margin-top: 12%;
   margin-bottom: 15%;
+}
+
+.shop{
+  background-color: rgb(234, 226, 226);
+  height: 260px;
+}
+
+
+.line-height p{
+  line-height: 1.8;
+}
+
+.headings h1,h2,h3,h4,h5,h6,p{
+  line-height: 1.8;
+}
+
+table th{
+  color: gray;
+
 }
 
 .image-container {
@@ -1463,9 +1703,9 @@ transform: translateY(0); /* Moves to the middle */
     padding: 0 15px;
   }
 
-  .btn1 {
-    width: 100%; /* Full width button on small screens */
-  }
+  /* .btn1 {
+    width: 100%; Full width button on small screens
+  } */
 }
 
 /* For tablets and small laptops */
@@ -1479,9 +1719,9 @@ transform: translateY(0); /* Moves to the middle */
     height: auto;
   }
 
-  .btn1 {
+  /* .btn1 {
     width: 100%;
-  }
+  } */
 }
 
 /* For larger screens */
@@ -1532,8 +1772,11 @@ transform: translateY(0); /* Moves to the middle */
   box-shadow: none;
   font-size: 16px;
 }
+.form-group input{
+height: 50px;
+}
 .cmnt {
-  border: 1px solid rgb(132, 127, 127);
+  border: 1px solid rgb(191, 186, 186);
   transition: border-color 0.3s;
   box-shadow: none;
 }
@@ -1556,6 +1799,9 @@ transform: translateY(0); /* Moves to the middle */
 
 .custom-form textarea {
   resize: none;
+}
+.form-group textarea{
+  height: 200px;
 }
 
 .custom-form .btn {
@@ -1651,41 +1897,5 @@ p {
 
 
 
-/* Ensure dropdown and submenu are responsive */
-.dropdown-menu {
-  position: relative;
-}
 
-.dropdown-submenu {
-  position: relative;
-}
 
-.dropdown-submenu .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%; /* Show submenu to the right */
-}
-
-.dropdown-submenu:hover > .dropdown-menu,
-.dropdown-submenu.show > .dropdown-menu {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  /* For small screens */
-  .dropdown-menu {
-    position: static;
-    float: none;
-  }
-
-  .dropdown-submenu > .dropdown-menu {
-    display: none;
-    position: static;
-  }
-
-  .dropdown-submenu.show > .dropdown-menu {
-    display: block;
-  }
-}
- 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Footer } from '../Home/Footer';
 
 export const Page3 = () => {
   return (
@@ -100,7 +101,7 @@ export const Page3 = () => {
     </div>
   </div>
 </div>
-
+<Footer/>
     </div>
   );
 };
