@@ -8,7 +8,6 @@ export const Footer = () => {
         <button className='btn5'>Download Now</button>
         </div> */}
 
-
         <div className='container-fluid bg-dark mt-3'>
             <div className='row'>
                 <div className='col-md-6'>
